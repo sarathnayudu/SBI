@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+    <link rel="Stylesheet" href="Styles/HomeStyle.css" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="JavaScript" type="text/javascript">
+    
+<!--
+        function calcHeight() {
+            //find the height of the internal page
+            var the_height = window.innerHeight+15;
+//document.getElementById('the_iframe').contentWindow.
+//document.body.scrollHeight;
+            
+            //change the height of the iframe
+            document.getElementById('the_iframe').height =
+the_height;
+            document.getElementById('iFrContent').height =
+the_height;
+        }
+//-->
+</script>
+
+
+</head>
+<body  style="margin:0;padding:0;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sm" runat="server"></asp:ScriptManager>
+    <div>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+    <tr>
+    <td colspan="2" >
+      <table width="100%" class="topHeader" cellpadding="0" cellspacing="0" border="0"  >
+				<tr >
+					<td height="38" valign="middle"  class="LogoText">
+						<asp:Label ID="lblLogoText" runat="server"   Text="Intellect Business"></asp:Label>&nbsp;<span class="logoText1" >HRMS</span>
+						
+					
+					</td>
+					
+					<td class="global" align="right" valign="middle" nowrap>Logged in as:  <asp:Label ID="lblUserName" Font-Bold="true" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				
+					<td align="right" nowrap></td>
+				</tr>
+				<tr><td colspan="3" height="2" width="100%" class="headerBorder"></td></tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="rightBar">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="167" class="leftBar" height="25" ></td>
+                                <td style="padding-left:10px;"> <asp:LinkButton ID="lnkHome" runat="server" Text="Home" CssClass="global"  PostBackUrl="~/Home.aspx"></asp:LinkButton></td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+                                <td>&nbsp;&nbsp;<a href="#" ID="HelpLink"  class="global" style="cursor:help;">Help</a>&nbsp;</td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+								
+								<td>&nbsp; <asp:LinkButton ID="lnkBtnLogout" runat="server" 
+                                             CssClass="global" Text="Logout" 
+                                            onclick="lnkBtnLogout_Click"></asp:LinkButton></td>
+								
+							</tr>
+						</table>
+					</td>
+					<td class="rightBar"  align="right">
+									
+						
+						<a href="#" ID="ReleaseNotesLink" class="global">Release Notes</a>
+						
+						<b><asp:label id="lblVersion" runat="server" CssClass="global" /></b>&nbsp;&nbsp;
+					</td>	
+				</tr>
+               
+				<tr><td colspan="2" height="2" width="100%" class="headerBorder1" ></td></tr>
+				
+			</table>
+    </td></tr>
+
+    <tr><td valign="top" class="leftFrame" style="background-color:#053346;" >
+  
+    <%-- <iframe id="the_iframe" src="SideMenu.aspx" class="leftFrame"  frameborder="0" scrolling="no" onLoad="calcHeight();">
+     </iframe>--%>
+  <table align="left" valign="top" width="100%" cellpadding="0"  cellspacing="0" border="5">
+				<tr   valign="top">
+					<td width="100%" valign="top" style="background-color:#084761;">
+						<a href="#"><img src="testimages/monthleft.gif" id="imgResize" alt="Hide Menu" onClick="ToggleMenu();" width="14" height="13" border="0" hspace="0" vspace="0"></a>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td valign="top">
+						<span id="spnMenu" style="display:''">
+							<table align="left" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">	
+								<tr>
+									<td width="100%" height="100%" valign="top">
+									<table id="Table_01" width="100%"  border="0" height="660" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="left" valign="top" >
+                                        <div class="Accordion">
+                                            <asp:Repeater ID="rptPages" runat="server" OnItemDataBound="rptPages_ItemDataBound">
+                                            <HeaderTemplate>
+                                            
+                                            <div class="AccordionPanel" >
+                                            <div class="AccordionPanelContent" >
+                                           
+                                            </HeaderTemplate>
+                                                <ItemTemplate>
+                                                 <asp:Panel ID="pnlHeading" Visible="false" runat="server"  class="AccordionPanelTab">
+                                                        My Work Area</asp:Panel>
+                                                <asp:Label ID="lblPageID" runat="server" Visible="false"  Text='<%#Eval("Pk_PageID")%>'></asp:Label>
+                                                <asp:Panel ID="pnlTitle" runat="server">
+                                                <a href='<%#Eval("Page_Path")%>?pid=<%#Eval("Pk_PageID")%>' class="sub-links" > 
+                                                    <asp:Label ID="lblPageName" runat="server"  Text='<%#Eval("Page_Name")%>'></asp:Label>
+                                                    </a>
+                                                    </asp:Panel>
+                                                    
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                </div>
+                                                </div>
+                                                
+                                                </FooterTemplate>
+                                            </asp:Repeater>
+                                            
+                                            </div>
+                                           
+
+                                        </td>
+                                       
+                                    </tr>
+                                    
+                                </table>
+									<%--	
+										<%	
+											Dim strCurrentPath As String = Request.PhysicalPath
+											Dim sXMLSourceFile As String = Left(strCurrentPath, InStrRev(strCurrentPath, "\")) & "menuitems.xml"
+										    Dim iTotal2 As Integer
+										    iTotal2 = DefineNode(Response, sXMLSourceFile, User, "BAMS_Admin")
+										%>--%>
+										<%--<script language="Javascript">--%>
+											<!--										    //
+										    // These two arrays work with each other to identify the menu element that should be hidden or made visible.  
+										    // There is a one-to-one relationship between the rows of each array.
+										    // Note: The value of the ASP variable iTotal used below represents the total number of items and subitems 
+										    //       in the menu.  The value is set by reference in the DisplayNode() subroutine call
+											
+											//-->	
+										<%--</script>--%>
+										<%--<script src="Scripts/navigation.js"></script>--%>
+									</td>
+								</tr>
+							</table>
+						</span>
+					</td>
+				</tr>
+			</table>
+    
+    
+    
+    </td>
+    <td valign="top" class="rightFrametd" align="left">
+   
+    <iframe id="iFrContent"  runat="server"  class="contentFrame"   frameborder="0" scrolling="no"  >
+     
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </iframe>
+      
+        </td>
+    </tr>
+    </table>
+  
+
+            </div>
+        
+   
+    </form>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* CSS Reset   
+----------------------------------------------------------*/
+
+table 
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* h1 style 
+----------------------------------------------------------*/
+h1
+{
+	font-size: 20px;
+	text-align: center;
+	background-color: #ffffdd;
+	border: solid 1px #888;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	width:765px;
+}
+
+/* Table style  
+----------------------------------------------------------*/
+table.tbl1
+{
+	width: 758px;
+}
+
+table.tbl1 thead
+{
+	background: #A3C2EA url('../images/tbl_head_bg.png') repeat-x scroll 0 0;
+	color: #333;
+	
+}
+
+table.tbl1 tbody
+{
+	
+}
+
+table.tbl1 tr td,
+table.tbl1 tr th
+{
+	border: solid 1px #888;
+	margin: 0;
+	padding: 4px 0;
+	text-align:left;
+	font-size:9pt;
+	
+}
+
+
+table.tbl1 tr td
+{
+	text-align: left;
+	background-color: #fff;
+	color: #444;
+	
+}
+
+table.tbl1 tbody tr.alt td
+{
+	background-color: #e4ecf7;
+}
+
+table.tbl1 tr.over td,
+table.tbl1 tbody tr.alt.over td
+{
+	background-color: #bcd4ec;
+	color: #000;
+}
+
+table.tbl1 a
+{
+	color: #2a4a73;
+	text-decoration: underline;
+}
+
+table.tbl1 a:hover
+{
+	text-decoration: none;
+}
+
+table.tbl1 a:visited
+{
+	color: #bccedc;
+}
+
+/* Define column widths 
+----------------------------------------------------------*/
+table.tbl1 td.id
+{
+	text-align:left;
+	padding:2px;
+	width:200px;
+}
+table.tbl1 td.fname
+{
+	text-align:left;
+	padding:2px;
+	width:420px;	
+}
+table.tbl1 td.lname
+{
+	text-align:left;
+	padding:2px;
+}
+table.tbl1 td.bdate
+{
+	
+}

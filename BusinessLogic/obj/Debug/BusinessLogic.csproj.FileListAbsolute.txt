@@ -1,0 +1,77 @@
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\15.Job2Network\BusinessLogic\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\38.E-Learning Management\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.2\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.3\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.4\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\inetpub\wwwroot\40.HRMS1.5\BusinessLogic\obj\Debug\BusinessLogic.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\bin\Debug\BusinessLogic.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\bin\Debug\BusinessLogic.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\bin\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\bin\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\obj\Debug\BusinessLogic.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\BusinessLogic\obj\Debug\BusinessLogic.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\bin\Debug\BusinessLogic.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\bin\Debug\BusinessLogic.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\bin\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\bin\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\obj\Debug\BusinessLogic.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Inetpub\wwwroot\HRMS New layout\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Inetpub\wwwroot\HRMS2010\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\DataAccess.dll
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.pdb

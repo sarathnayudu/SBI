@@ -1,0 +1,55 @@
+C:\inetpub\wwwroot\15.Job2Network\DataAccess\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\15.Job2Network\DataAccess\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\15.Job2Network\DataAccess\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\15.Job2Network\DataAccess\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\15.Job2Network\DataAccess\DataAccess\obj\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\38.E-Learning Management\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\38.E-Learning Management\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\38.E-Learning Management\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\38.E-Learning Management\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\38.E-Learning Management\DataAccess\obj\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.2\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.2\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.2\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.2\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.2\DataAccess\obj\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.3\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.3\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.3\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.3\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.3\DataAccess\obj\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.4\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.4\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.4\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.4\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.4\DataAccess\obj\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.5\DataAccess\bin\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.5\DataAccess\bin\Debug\DataAccess.pdb
+C:\inetpub\wwwroot\40.HRMS1.5\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\40.HRMS1.5\DataAccess\obj\Debug\DataAccess.dll
+C:\inetpub\wwwroot\40.HRMS1.5\DataAccess\obj\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\DataAccess\bin\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\DataAccess\bin\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\DataAccess\obj\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout\DataAccess\obj\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\DataAccess\bin\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\DataAccess\bin\Debug\DataAccess.pdb
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\DataAccess\obj\Debug\DataAccess.dll
+F:\inetpub\wwwroot\40.HRMS1.7 New layout - without frames\DataAccess\obj\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS New layout\DataAccess\bin\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS New layout\DataAccess\bin\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS New layout\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\HRMS New layout\DataAccess\obj\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS New layout\DataAccess\obj\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS2010\DataAccess\bin\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS2010\DataAccess\bin\Debug\DataAccess.pdb
+C:\Inetpub\wwwroot\HRMS2010\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\HRMS2010\DataAccess\obj\Debug\DataAccess.dll
+C:\Inetpub\wwwroot\HRMS2010\DataAccess\obj\Debug\DataAccess.pdb
+C:\IBS\IBSHRMS\Production\DataAccess\bin\Debug\DataAccess.dll
+C:\IBS\IBSHRMS\Production\DataAccess\bin\Debug\DataAccess.pdb
+C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.dll
+C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.pdb

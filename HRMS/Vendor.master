@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Vendor.master.cs" Inherits="Vendor" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+
+    <link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/CustomStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="Stylesheet" href="Styles/HomeStyle.css" type="text/css" />
+    <script src="Scripts/DateValidation.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        function ToggleMenu() {
+
+
+            if (document.getElementById("spnMenu").style.display == 'none') {
+
+                document.getElementById("spnMenu").style.display = '';
+
+                document.getElementById("imgResize").src = "images/monthleft.gif";
+
+                document.getElementById("imgResize").alt = "Hide Menu"
+
+
+            } else {
+
+                document.getElementById("spnMenu").style.display = 'none';
+
+                document.getElementById("imgResize").src = "images/monthright.gif";
+
+                document.getElementById("imgResize").alt = "Show Menu"
+
+
+            }
+        }
+
+        //window.parent.ResizeFrame();
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="sm" runat="server"></asp:ScriptManager>
+    <div>
+       <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+    <tr>
+    <td colspan="2" >
+      <table width="100%" class="topHeader" cellpadding="0" cellspacing="0" border="0"  >
+				<tr >
+					<td height="38" valign="middle"  class="LogoText">
+						<asp:Label ID="lblLogoText" runat="server"  ></asp:Label>&nbsp;<span class="logoText1" >HRMS</span>
+						
+					
+					</td>
+					
+					<td class="global" align="right" valign="middle" nowrap>Logged in as:  <asp:Label ID="lblUserName" Font-Bold="true" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				
+					<td align="right" nowrap></td>
+				</tr>
+				<tr><td colspan="3" height="2" width="100%" class="headerBorder"></td></tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="rightBar">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="176" class="leftBar" height="25" ></td>
+                                <td style="padding-left:10px;"> <asp:LinkButton ID="lnkHome" runat="server" Text="Home" CssClass="global"  PostBackUrl="~/VendorPage.aspx"></asp:LinkButton></td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+                                <td>&nbsp;&nbsp;<a href="#" ID="HelpLink"  class="global" style="cursor:help;">Help</a>&nbsp;</td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+								
+								<td>&nbsp; <asp:LinkButton ID="lnkBtnLogout" runat="server" 
+                                             CssClass="global" Text="Logout" 
+                                            onclick="lnkBtnLogout_Click"></asp:LinkButton></td>
+								
+							</tr>
+						</table>
+					</td>
+					<td class="rightBar"  align="right">
+									
+						
+						<a href="#" ID="ReleaseNotesLink" class="global">Release Notes</a>
+						
+						<b><asp:label id="lblVersion" runat="server" CssClass="global" /></b>&nbsp;&nbsp;
+					</td>	
+				</tr>
+               
+				<tr><td colspan="2" height="2" width="100%" class="headerBorder1" ></td></tr>
+				
+			</table>
+    </td></tr>
+
+    <tr><td valign="top" class="leftFrame" >
+  
+    <%-- <iframe id="the_iframe" src="SideMenu.aspx" class="leftFrame"  frameborder="0" scrolling="no" onLoad="calcHeight();">
+     </iframe>--%>
+  <table align="left" valign="top" width="100%" cellpadding="0"  cellspacing="0"  >
+				<tr   valign="top">
+					<td width="100%" valign="top" >
+						<a href="#"><img src="images/monthleft.gif" id="imgResize" alt="Hide Menu" onClick="ToggleMenu();" width="14" height="13" border="0" hspace="0" vspace="0"></a>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td valign="top">
+						<span id="spnMenu" style="display:''">
+							<table align="left" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">	
+								<tr>
+									<td width="100%" height="100%" valign="top">
+									<table id="Table1" width="100%"  border="0" height="660" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td align="left" valign="top" style="width: 200px;">
+                                        <div class="Accordion">
+    <div class="AccordionPanel">
+        <div class="AccordionPanelContent">
+            <a href="InsuranceCertificate.aspx" class="sub-links">
+                Insurance Certificate
+            </a>
+             <a href="VendorInvoices.aspx" class="sub-links">
+                Vendor Invoices
+            </a>
+        </div>
+    </div>
+    </div>
+
+                                        </td>
+                                       
+                                    </tr>
+                                    
+                                </table>
+                                <script language="javascript" type="text/javascript">
+
+                                    var the_height = document.documentElement.clientHeight + 15;
+
+                                    document.getElementById('Table1').style.height = the_height + "px";
+
+                                               
+                                           </script>
+									<%--	
+										<%	
+											Dim strCurrentPath As String = Request.PhysicalPath
+											Dim sXMLSourceFile As String = Left(strCurrentPath, InStrRev(strCurrentPath, "\")) & "menuitems.xml"
+										    Dim iTotal2 As Integer
+										    iTotal2 = DefineNode(Response, sXMLSourceFile, User, "BAMS_Admin")
+										%>--%>
+										<%--<script language="Javascript">--%>
+											<!--										    //
+										    // These two arrays work with each other to identify the menu element that should be hidden or made visible.  
+										    // There is a one-to-one relationship between the rows of each array.
+										    // Note: The value of the ASP variable iTotal used below represents the total number of items and subitems 
+										    //       in the menu.  The value is set by reference in the DisplayNode() subroutine call
+											
+											//-->	
+										<%--</script>--%>
+										<%--<script src="Scripts/navigation.js"></script>--%>
+									</td>
+								</tr>
+							</table>
+						</span>
+					</td>
+				</tr>
+			</table>
+    
+    
+    
+    </td>
+    <td valign="top" class="rightFrametd" align="left">
+   
+    
+     
+     <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                                                                </asp:ContentPlaceHolder>
+       
+      
+        </td>
+    </tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

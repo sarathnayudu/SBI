@@ -1,0 +1,233 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        </style>
+
+    <script src="SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+
+    <link href="SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/CustomStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="Stylesheet" href="Styles/HomeStyle.css" type="text/css" />
+    <script src="Scripts/DateValidation.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript">
+        function ToggleMenu() {
+
+
+            if (document.getElementById("spnMenu").style.display == 'none') {
+
+                document.getElementById("spnMenu").style.display = '';
+
+                document.getElementById("imgResize").src = "images/monthleft.gif";
+
+                document.getElementById("imgResize").alt = "Hide Menu"
+                
+
+                        } else {
+
+                document.getElementById("spnMenu").style.display = 'none';
+
+                document.getElementById("imgResize").src = "images/monthright.gif";
+
+                document.getElementById("imgResize").alt = "Show Menu"
+                
+
+            } 
+        }
+
+       
+//window.parent.ResizeFrame();
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scmMain" runat="server">
+    </asp:ScriptManager>
+    <div>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+    <tr>
+    <td colspan="2" >
+      <table width="100%" class="topHeader" cellpadding="0" cellspacing="0" border="0"  >
+				<tr >
+					<td height="38" valign="middle"  class="LogoText">
+						<asp:Label ID="lblLogoText" runat="server"></asp:Label>&nbsp;<span class="logoText1" >HRMS</span>
+						
+					
+					</td>
+					
+					<td class="global" align="right" valign="middle" >Logged in as:  <asp:Label ID="lblUserName" Font-Bold="true" runat="server"></asp:Label> </td>
+				
+					<td align="right" nowrap></td>
+				</tr>
+				<tr><td colspan="3" height="2" width="100%" class="headerBorder"></td></tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="rightBar">
+						<table cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="176" class="leftBar" height="25" ></td>
+                                <td style="padding-left:10px;"> <asp:LinkButton ID="lnkHome" runat="server" Text="Home" CssClass="global"  PostBackUrl="~/HRMS.aspx"></asp:LinkButton></td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+                                <td>&nbsp;&nbsp;<a href="Help.html" target="_blank" ID="HelpLink"  class="global" style="cursor:help;">Help</a>&nbsp;</td>
+								<td><font color="#99ffff">&nbsp;&#124;&nbsp;</font></td>
+								
+								<td>&nbsp; <asp:LinkButton ID="lnkBtnLogout" runat="server" 
+                                             CssClass="global" Text="Logout" 
+                                            onclick="lnkBtnLogout_Click"></asp:LinkButton></td>
+                                            <td>&nbsp;
+                                            <asp:LinkButton ID="lnkBtnEval" runat="server" Visible="false"
+                                             CssClass="global" Style="border-left:solid 1px #ffffff;padding-left:5px;" Text="Evaluation Test" 
+                                            onclick="lnkBtnEval_Click"></asp:LinkButton> </td>
+								
+							</tr>
+						</table>
+					</td>
+					<td class="rightBar"  align="right">
+									
+						
+						<a href="#" ID="ReleaseNotesLink" class="global">Release Notes</a>
+						
+						<b><asp:label id="lblVersion" runat="server" CssClass="global" /></b>&nbsp;&nbsp;
+					</td>	
+				</tr>
+               
+				<tr><td colspan="2" height="2" width="100%" class="headerBorder1" ></td></tr>
+				
+			</table>
+    </td></tr>
+
+    <tr><td valign="top" class="leftFrame"  >
+  
+    <%-- <iframe id="the_iframe" src="SideMenu.aspx" class="leftFrame"  frameborder="0" scrolling="no" onLoad="calcHeight();">
+     </iframe>--%>
+  <table align="left" border="0" width="100%" cellpadding="0"  cellspacing="0" >
+				<tr   valign="top">
+					<td width="100%" valign="top" >
+						<a href="#" onclick="ToggleMenu();"><img src="images/monthleft.gif" id="imgResize" alt="Hide Menu"  width="14" height="13" border="0" hspace="0" vspace="0"></a>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td valign="top" >
+						<span id="spnMenu" >
+                        
+							<table align="left"  width="100%"  cellpadding="0" cellspacing="0" border="0">	
+								<tr>
+									<td width="100%"   valign="top">
+                                   
+									<table id="Table1" width="100%"   border="0"  cellpadding="0" cellspacing="0" >
+                                    <tr>
+                                        <td align="left" valign="top" >
+                                        <div class="Accordion">
+                                            <asp:Repeater ID="rptPages" runat="server" OnItemDataBound="rptPages_ItemDataBound">
+                                            <HeaderTemplate>
+                                            
+                                            <div class="AccordionPanel" >
+                                            <div class="AccordionPanelContent" >
+                                           
+                                            </HeaderTemplate>
+                                                <ItemTemplate>
+                                                 <asp:Panel ID="pnlHeading" Visible="false" runat="server"  class="AccordionPanelTab">
+                                                        My Work Area</asp:Panel>
+                                                <asp:Label ID="lblPageID" runat="server" Visible="false"  Text='<%#Eval("Pk_PageID")%>'></asp:Label>
+                                                <asp:Panel ID="pnlTitle" runat="server">
+                                                <a href='<%#Eval("Page_Path")%>?pid=<%#Eval("Pk_PageID")%>' class="sub-links" > 
+                                                    <asp:Label ID="lblPageName" runat="server"  Text='<%#Eval("Page_Name")%>'></asp:Label>
+                                                    </a>
+                                                    </asp:Panel>
+                                                    
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                </div>
+                                                </div>
+                                                
+                                                </FooterTemplate>
+                                            </asp:Repeater>
+                                            
+                                            </div>
+                                           
+                                           
+                                        </td>
+                                       
+                                    </tr>
+                                    
+                                </table>
+                                <script language="javascript" type="text/javascript">
+
+                                    var the_height = document.documentElement.clientHeight + 15;
+                                    
+                                    document.getElementById('Table1').style.height = the_height+"px";
+
+                                               
+                                           </script>
+									
+									</td>
+								</tr>
+							</table>
+						</span>
+					</td>
+				</tr>
+			</table>
+    
+    
+    
+    </td>
+    <td valign="top" class="rightFrametd" align="left">
+   
+    
+     
+     <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                                                                </asp:ContentPlaceHolder>
+       
+      
+        </td>
+    </tr>
+    </table>
+    <asp:HiddenField ID="hdnEvalID" runat="server" />
+        <%--<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="left" valign="top">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        
+                        <tr>
+                            <td align="left" valign="top" >
+                                <table id="Table_01" width="100%"  border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        
+                                        <td align="left" valign="top" style="padding-left:0px;">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" >
+                                                <tr>
+                                                    <td valign="top" align="left" >
+                                                      
+                                                               
+                                                      
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                          
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>--%>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
+

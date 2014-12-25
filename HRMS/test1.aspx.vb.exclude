@@ -1,0 +1,25 @@
+﻿
+Partial Class test1
+    Inherits System.Web.UI.Page
+
+    Private Sub btnCreateDatabase_Click( _
+        ByVal sender As System.Object, _
+        ByVal e As System.EventArgs) _
+        Handles btnCreateDatabase.Click
+        'This function calls the sqlcmd
+        Dim command As String
+        If txtUserName.Enabled = False Then
+            'Windows Authentication
+            command = "sqlcmd -S " + txtSQLName.Text + _
+            " -i " + txtFile.Text
+        Else
+            'SQL Authentication
+            command = "sqlcmd -S " + txtSQLName.Text + _
+            " -i " + txtFile.Text + " -U " + txtUserName.Text + _
+            " -P " + txtPassword.Text + " -i " + txtFile.Text
+        End If
+
+        Shell(command)
+        MsgBox("Database created successfully.")
+    End Sub
+End Class

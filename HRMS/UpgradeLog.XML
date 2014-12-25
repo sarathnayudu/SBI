@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="HRMS">
+</Property><Property Name="Solution File" Value="C:\IBS\IBSHRMS\Production\HRMS\HRMS.sln">
+</Property><Property Name="Date" Value="Saturday, March 09, 2013">
+</Property><Property Name="Time" Value="23:36:49 PM">
+</Property></Properties><Event ErrorLevel="0" Project="HRMS" Source="HRMS.csproj" Description="Project file successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\HRMS.csproj">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="HRMS.csproj.user" Description="Project user file successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\HRMS.csproj.user">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Default.aspx.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Default.aspx.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Default.aspx.designer.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Default.aspx.designer.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Emp.aspx.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Emp.aspx.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Emp.aspx.designer.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Emp.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Employee.aspx.cs" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Employee.aspx.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Employee.aspx.designer.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Employee.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="HRMS.aspx.cs" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\HRMS.aspx.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="HRMS.aspx.designer.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\HRMS.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Main.Master.cs" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Main.Master.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Main.Master.designer.cs" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Main.Master.designer.cs">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Default.aspx" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Default.aspx">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="Emp.aspx" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\Emp.aspx">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="homepage.html" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\homepage.html">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="HRMS.aspx" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\HRMS.aspx">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\bg.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\bg.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage_01.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage_01.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage_02.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage_02.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage_03.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage_03.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage_04.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage_04.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\homepage_05.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\homepage_05.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\lft-mnu-bg-hover.gif" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\lft-mnu-bg-hover.gif">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\lft-mnu-bg.gif" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\lft-mnu-bg.gif">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\login.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\login.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\logo.jpg" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\logo.jpg">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="images\spacer.gif" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\images\spacer.gif">
+</Event><Event ErrorLevel="2" Project="HRMS" Source="login-screen.html" Description="Failed to backup file as C:\IBS\IBSHRMS\Production\HRMS\Backup\login-screen.html">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Scripts\jquery-1.4.1-vsdoc.js" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Scripts\jquery-1.4.1-vsdoc.js">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Scripts\jquery-1.4.1.js" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Scripts\jquery-1.4.1.js">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Scripts\jquery-1.4.1.min.js" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Scripts\jquery-1.4.1.min.js">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="SpryAssets\SpryAccordion.css" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\SpryAssets\SpryAccordion.css">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="SpryAssets\SpryAccordion.js" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\SpryAssets\SpryAccordion.js">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Styles\CustomStyles.css" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Styles\CustomStyles.css">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Web.config" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Employee.aspx" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Employee.aspx">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="Main.Master" Description="File successfully backed up as C:\IBS\IBSHRMS\Production\HRMS\Backup\Main.Master">
+</Event><Event ErrorLevel="1" Project="HRMS" Source="HRMS.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="HRMS" Source="HRMS.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="HRMS" Source="HRMS.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="HRMS.csproj" Description="">
+</Event></UpgradeLog>

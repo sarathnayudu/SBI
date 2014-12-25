@@ -1,0 +1,4 @@
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Release\BusinessLogic.dll
+C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Release\DataAccess.dll
+C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Release\ResolveAssemblyReference.cache
+C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Release\BusinessLogic.dll

@@ -1,0 +1,68 @@
+body 
+{
+    
+    margin:0;
+    padding:0;
+    font-family:tahoma,sans-serif; font-size:11px; color:#000000;  background-color: #eaeaea;
+}
+
+
+.global				{ text-align: center; font-family: arial,sans-serif; font-size: 12px; font-weight: none; color: #ffffff; text-decoration: none; }
+.global:link		{ text-align: center; font-family: arial,sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; }
+.global:visited		{ text-align: center; font-family: arial,sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; }
+.global:hover		{ text-align: center; font-family: arial,sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: underline; }
+.globalsmall		{ text-align: center; font-family: arial,sans-serif; font-size: 9px; font-weight: none; color: #ffffff; text-decoration: none; }
+
+
+.contentFrame
+{
+    
+    width:99%;    
+    margin:0px 0px 0px 6px;
+    padding:0;
+}
+
+.topHeader
+{
+    BACKGROUND-IMAGE: url('../images/topbg.png');background-repeat:no-repeat;BACKGROUND-COLOR: #116d87; 
+    height:41px;
+}
+
+.LogoText
+{
+    color:#116d87;padding-left:5px;font-size:18pt;font-weight:bold;font-family:Bell MT;
+}
+
+.logoText1
+{
+    font-family:Berlin Sans FB;font-weight:normal;
+}
+
+.headerBorder
+{
+   background-color:#c0c0c0;
+}
+.headerBorder1
+{
+   
+   background-color:#0a495b;
+}
+
+
+.leftBar
+{
+    background-color:#084a7c;
+}
+.rightBar
+{
+    background-color:#011217;
+}
+
+.leftFrame
+{
+    width:177px;border-right:solid 3px #24566a;background-color:#084a7c;
+}
+.rightFrametd
+{
+    width:100%;margin:0;padding-top:5px;padding-left:3px;
+}

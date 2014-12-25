@@ -1,0 +1,12 @@
+C:\EBS\HRMS\HRMS\bin\HRMS.dll
+C:\EBS\HRMS\HRMS\bin\HRMS.pdb
+C:\EBS\HRMS\HRMS\obj\Debug\ResolveAssemblyReference.cache
+C:\EBS\HRMS\HRMS\obj\Debug\HRMS.dll
+C:\EBS\HRMS\HRMS\obj\Debug\HRMS.pdb
+C:\EBS\HRMS\HRMS\bin\HRMS.DL.dll
+C:\EBS\HRMS\HRMS\bin\HRMS.DL.pdb
+C:\EBS\HRMS\HRMS\bin\HRMS.BLL.dll
+C:\EBS\HRMS\HRMS\bin\HRMS.BLL.pdb
+C:\Inetpub\wwwroot\HRMS New layout\HRMS\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\HRMS New layout\HRMS\obj\Debug\HRMS.dll
+C:\Inetpub\wwwroot\HRMS New layout\HRMS\obj\Debug\HRMS.pdb

@@ -1,0 +1,9 @@
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\ResolveAssemblyReference.cache
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\IBSMail.Resources.resources
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\IBSMail.vbproj.GenerateResource.Cache
+C:\IBSTEST\IBSMail\IBSMail\bin\IBSMail.dll
+C:\IBSTEST\IBSMail\IBSMail\bin\IBSMail.pdb
+C:\IBSTEST\IBSMail\IBSMail\bin\IBSMail.xml
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\IBSMail.dll
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\IBSMail.xml
+C:\IBSTEST\IBSMail\IBSMail\obj\Debug\IBSMail.pdb

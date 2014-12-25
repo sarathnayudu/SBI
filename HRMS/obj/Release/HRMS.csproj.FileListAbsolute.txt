@@ -1,0 +1,7 @@
+C:\EBS\HRMS\HRMS\obj\Release\ResolveAssemblyReference.cache
+C:\EBS\HRMS\HRMS\bin\HRMS.dll
+C:\EBS\HRMS\HRMS\bin\HRMS.pdb
+C:\EBS\HRMS\HRMS\bin\HRMS.DL.dll
+C:\EBS\HRMS\HRMS\bin\HRMS.DL.pdb
+C:\EBS\HRMS\HRMS\obj\Release\HRMS.dll
+C:\EBS\HRMS\HRMS\obj\Release\HRMS.pdb

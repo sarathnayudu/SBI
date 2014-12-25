@@ -1,0 +1,5 @@
+D:\Website\JOBPORTAL\DLLS\DataAccess\DataAccess\bin\Debug\DataAccess.dll
+D:\Website\JOBPORTAL\DLLS\DataAccess\DataAccess\bin\Debug\DataAccess.pdb
+D:\Website\JOBPORTAL\DLLS\DataAccess\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\Website\JOBPORTAL\DLLS\DataAccess\DataAccess\obj\Debug\DataAccess.dll
+D:\Website\JOBPORTAL\DLLS\DataAccess\DataAccess\obj\Debug\DataAccess.pdb

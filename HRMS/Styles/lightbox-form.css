@@ -1,0 +1,200 @@
+
+.filter1
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right:0%;
+	bottom:0%;
+	width: 100%;
+	height: 2200px;
+	background-color: #111111;
+	z-index:1000;
+	opacity:0.7;
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+}
+
+
+.box1 
+{
+	display:none;
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	width: 790px;
+	height: 410px;
+	padding-top:50px;
+	margin-top:-18px;
+	
+	border: 10px solid #404040;
+	background-color: #ffffff;
+	z-index:1001;
+	overflow: none;
+	
+}
+
+.boxinside1 
+{
+	
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 780px;
+	height: 400px;
+	padding-top:50px;
+	text-align:left;
+	border: 5px solid #777777;
+	background-color: #ffffff;
+	z-index:1001;
+	overflow: none;
+}
+
+
+.boxtitle1
+{
+	position:absolute;
+	
+	top:0;
+	left:0;
+	width:772px;
+	height:24px;
+	
+	padding-top:4px;
+	padding-left:8px;
+	margin:0;
+	background-color:#777777;
+	border-bottom:solid 4px  #ebe7ee;
+	font-weight:bold;
+	color:#ffffff;
+	font-size:11pt;
+	font-family:Georgia;
+	text-align:center;
+}
+
+
+
+.filterSmall
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right:0%;
+	bottom:0%;
+	width: 100%;
+	height: 2200px;
+	background-color: #111111;
+	z-index:1000;
+	opacity:0.7;
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+}
+
+
+.boxSmall
+{
+	display:none;
+	position: absolute;
+	top: 0%;
+	left: 30%;
+	width: 490px;
+	height: 230px;
+	padding-top:50px;
+	margin-top:-18px;
+	
+	border: 10px solid #404040;
+	background-color: #ffffff;
+	z-index:5001;
+	overflow: none;
+	
+}
+
+.boxinsideSmall
+{
+	
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 480px;
+	height: 220px;
+	padding-top:50px;
+	text-align:left;
+	border: 5px solid #777777;
+	background-color: #ffffff;
+	z-index:5001;
+	overflow: none;
+}
+
+
+.boxtitleSmall
+{
+	position:absolute;
+	
+	top:0;
+	left:0;
+	width:482px;
+	height:24px;	
+	padding-top:4px;
+	padding-left:8px;
+	margin:0;
+	background-color:#777777;
+	border-bottom:solid 4px  #ebe7ee;
+	font-weight:bold;
+	color:#ffffff;
+	font-size:11pt;
+	font-family:Georgia;
+	text-align:center;
+}
+
+.styleCloseX
+{
+ background-color: #ffffff;
+ color: #000000;
+ text-align: center;
+ font-weight: bold;
+ text-decoration: none;
+ position:absolute;
+ padding: 2px;
+ padding-left:5px;
+ padding-right:5px; 
+ font-size:12pt;
+ z-index:3000;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

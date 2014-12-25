@@ -1,0 +1,3 @@
+C:\IBS\IBSHRMS\Production\DataAccess\bin\Release\DataAccess.dll
+C:\IBS\IBSHRMS\Production\DataAccess\obj\Release\ResolveAssemblyReference.cache
+C:\IBS\IBSHRMS\Production\DataAccess\obj\Release\DataAccess.dll

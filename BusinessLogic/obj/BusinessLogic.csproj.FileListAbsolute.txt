@@ -1,0 +1,7 @@
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Website\JOBPORTAL\DLLS\BusinessLogic\BusinessLogic\obj\Debug\BusinessLogic.pdb
