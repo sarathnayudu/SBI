@@ -926,6 +926,12 @@ namespace DataAccess
         }
 
         #endregion
+
+        public DataTable SearchProjects(SqlParameter[] sqlParams)
+        {
+            DataSet ds = SqlHelper.ExecuteDataset(sql_con, CommandType.StoredProcedure, "sp_SearchProjects", sqlParams);
+           return ds.Tables[0];
+        }
     }
 }
 

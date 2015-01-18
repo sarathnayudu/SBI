@@ -61,6 +61,7 @@ public partial class ProjectsDetail : System.Web.UI.Page
             //tcVendor.Visible = true;
             divProject.Visible = true;
             gvProjectDetails.Visible = false;
+            pnlSearch.Visible = false;
             hdnProjectsID.Value = "";
             lnkBtnProj.CommandArgument = "Back";
             lnkBtnProj.Text = "Back to Projects Detail";
@@ -72,6 +73,7 @@ public partial class ProjectsDetail : System.Web.UI.Page
             //tcVendor.Visible = false;
             divProject.Visible = false;
             gvProjectDetails.Visible = true;
+            pnlSearch.Visible = true;
             lnkBtnProj.CommandArgument = "Add";
             lnkBtnProj.Text = "Add New Project Detail";
         }
@@ -124,7 +126,9 @@ public partial class ProjectsDetail : System.Web.UI.Page
                 oBll.CreatedDate = System.DateTime.Now;
                 oBll.ModifiedBy = Session["modifiedBy"].ToString();
                 oBll.ModifiedDate = System.DateTime.Now;
-
+                oBll.EmailCC = txtEmailCC.Text;
+                oBll.EmailTo = txtEmailTo.Text;
+                oBll.Terms = txtTerms.Text;
 
                 lblMsg.Text = oBll.InsOrUpdtProjects();
                 lblMsg.Visible = true;
@@ -132,6 +136,7 @@ public partial class ProjectsDetail : System.Web.UI.Page
 
                 divProject.Visible = false;
                 gvProjectDetails.Visible = true;
+                pnlSearch.Visible = true;
                 lnkBtnProj.CommandArgument = "Add";
                 lnkBtnProj.Text = "Add New Project Detail";
             
@@ -187,8 +192,12 @@ public partial class ProjectsDetail : System.Web.UI.Page
 
             ddlStatus.SelectedValue = Convert.ToByte(oBll.Status).ToString();
 
+            txtTerms.Text = oBll.Terms;
+            txtEmailTo.Text = oBll.EmailTo;
+            txtEmailCC.Text = oBll.EmailCC;
 
             gvProjectDetails.Visible = false;
+            pnlSearch.Visible = false;
             divProject.Visible = true;
             btnSave.Text = "Update";
             lnkBtnProj.CommandArgument = "Back";
@@ -219,6 +228,7 @@ public partial class ProjectsDetail : System.Web.UI.Page
 
     private void BindProjectDetails()
     {
+        txtSearch.Text = string.Empty;
         oBll.OrgProjectID = null;
         oBll.OrgEmpId = null;
         oBll.GetProjects();
@@ -254,6 +264,10 @@ public partial class ProjectsDetail : System.Web.UI.Page
         ddlStatus.SelectedIndex = 0;
         ddlOvertime.SelectedIndex = 0;
         txtOvertimeRate.Text = "";
+        txtTerms.Text = "";
+        txtEmailTo.Text = "";
+        txtEmailCC.Text = "";
+     
     }
 
     private void BindClients()
@@ -335,4 +349,14 @@ public partial class ProjectsDetail : System.Web.UI.Page
             Response.Redirect("~/NoAccess.aspx");
     }
 
+    protected void btnProjSearch_Click(object sender, EventArgs e)
+    {
+        SearchProjectDetails(txtSearch.Text);
+    }
+
+    private void SearchProjectDetails(string p)
+    {
+        gvProjectDetails.DataSource = oBll.SearchProjects(p);
+        gvProjectDetails.DataBind();
+    }
 }

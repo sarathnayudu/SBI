@@ -939,7 +939,7 @@ namespace BusinessLogic
 
         public string InsOrUpdtProjects()
         {
-            SqlParameter[] sqlParams = new SqlParameter[19];
+            SqlParameter[] sqlParams = new SqlParameter[22];
 
             sqlParams[0] = new SqlParameter("@PK_Org_ProjectID", this.OrgProjectID);
             sqlParams[1] = new SqlParameter("@FK_Org_EmpID", this.OrgEmpId);
@@ -960,6 +960,9 @@ namespace BusinessLogic
             sqlParams[16] = new SqlParameter("@ActiveFlag", this.Status);
             sqlParams[17] = new SqlParameter("@OverTime_Allowed", this.OverTimeAllow);
             sqlParams[18] = new SqlParameter("@OverTime_Rate", this.OverTimeRate);
+            sqlParams[19] = new SqlParameter("@Terms", this.Terms);
+            sqlParams[20] = new SqlParameter("@EmailTo", this.EmailTo);
+            sqlParams[21] = new SqlParameter("@EmailCCTo", this.EmailCC);
 
             return oDal.InsOrUpdtProjects(sqlParams);
         }
@@ -997,6 +1000,10 @@ namespace BusinessLogic
                 if (this.oDsProjDetails.Tables[0].Rows[0]["OverTime_Rate"].ToString() != "")
                     this.OverTimeRate = Convert.ToDecimal(this.oDsProjDetails.Tables[0].Rows[0]["OverTime_Rate"].ToString());
                 this.Status = Convert.ToByte(Convert.ToBoolean(this.oDsProjDetails.Tables[0].Rows[0]["ActiveFlag"].ToString()));
+                this.Terms = this.oDsProjDetails.Tables[0].Rows[0]["Terms"].ToString();
+                this.EmailTo=this.oDsProjDetails.Tables[0].Rows[0]["EmailTO"].ToString();
+                this.EmailCC = this.oDsProjDetails.Tables[0].Rows[0]["EmailCCTo"].ToString();
+                this.Cust_Name = this.oDsProjDetails.Tables[0].Rows[0]["Cust_Name"].ToString();
             }
         }
 
@@ -2516,11 +2523,36 @@ namespace BusinessLogic
             get { return _oDsEmpEvaluation; }
             set { _oDsEmpEvaluation = value; }
         }
-        
+
+        public string _EmailTo = "", _Terms = "", _EmailCC = "";
+        public string EmailTo
+        {
+            get { return _EmailTo; }
+            set { _EmailTo = value; }
+        }
+        public string Terms
+        {
+            get { return _Terms; }
+            set { _Terms = value; }
+        }
+        public string EmailCC
+        {
+            get { return _EmailCC; }
+            set { _EmailCC = value; }
+        }
 
         #endregion       
                 
 
+    
+        public DataTable SearchProjects(string srchTxt)
+        {
+            SqlParameter[] sqlParams = new SqlParameter[1];
+            sqlParams[0] = new SqlParameter("@SearchFor", srchTxt);
+            return oDal.SearchProjects(sqlParams);
+        }
+
+        public string Cust_Name { get; set; }
     }
 
 }

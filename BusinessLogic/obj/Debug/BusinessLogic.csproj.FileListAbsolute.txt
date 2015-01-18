@@ -75,3 +75,10 @@ C:\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\DataAccess.pdb
 C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
 C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\DataAccess.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\BusinessLogic\obj\Debug\BusinessLogic.pdb

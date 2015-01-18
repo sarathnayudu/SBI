@@ -53,3 +53,8 @@ C:\IBS\IBSHRMS\Production\DataAccess\bin\Debug\DataAccess.pdb
 C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\ResolveAssemblyReference.cache
 C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.dll
 C:\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\DataAccess\bin\Debug\DataAccess.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\DataAccess\bin\Debug\DataAccess.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\Production\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

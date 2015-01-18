@@ -1,34 +1,63 @@
 ﻿<%@ Page Title="Projects Detail" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="ProjectsDetail.aspx.cs" Inherits="ProjectsDetail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" Runat="Server">
 
     <fieldset>
         <legend class="MainLegendStyle">Projects:</legend>
-        <div style="float: right;">
-            <asp:LinkButton ID="lnkBtnProj" CssClass="main" CommandArgument="Add" OnClick="lnkBtnProj_Click"
-                Text="Add New Project Detail" runat="server"></asp:LinkButton></div>
+        <table>
+      <tr>
+      <td>
+        &nbsp   &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp
+         &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp 
+          &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp 
+            &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp                            
+      </td>
+      <td>
+       <asp:Panel ID="pnlSearch" runat="server">
+       
+        <asp:Label ID="lblSearch" runat="server" Text="Search" CssClass="newStyle1" ></asp:Label>
+       
+
+         
+        <asp:TextBox ID="txtSearch"  runat="server"  ></asp:TextBox> 
+       
+        
+        <asp:Button ID="btnProjSearch" Text="Search" runat="server" 
+                onclick="btnProjSearch_Click" />
+
+                 </asp:Panel>
+      </td>
+      <td>
+       <asp:LinkButton ID="lnkBtnProj" CssClass="main" CommandArgument="Add" OnClick="lnkBtnProj_Click"
+                Text="Add New Project Detail" runat="server"></asp:LinkButton>
+      </td>
+      </tr>
+      </table>
+
         <div style="margin-top: 20px;">
             <asp:GridView ID="gvProjectDetails" runat="server" Width="98%" CssClass="gridViewStyle" RowStyle-CssClass="rowStyle"
                 EmptyDataText="Sorry! no records found" AlternatingRowStyle-CssClass="alternateRow"
                 HeaderStyle-CssClass="gvHeader" AutoGenerateColumns="false" OnSelectedIndexChanging="gvProjectDetails_SelectedIndexChanging"
                 OnRowDeleting="gvProjectDetails_RowDeleting" OnRowDataBound="gvProjectDetails_RowDataBound">
                 <Columns>
-                    <asp:TemplateField>
+                    <%--<asp:TemplateField>
                         <HeaderTemplate>
                             S.NO</HeaderTemplate>
                         <ItemTemplate>
                             <%#Container.DataItemIndex + 1%>
-                            <asp:Label ID="lblProjID" runat="server" Visible="false" Text='<%#Eval("PK_Org_ProjectID") %>'></asp:Label>
-                            <asp:Label ID="lblOrgEmpID" runat="server" Visible="false" Text='<%#Eval("FK_Org_EmpID") %>'></asp:Label>
+                            
                         </ItemTemplate>
-                    </asp:TemplateField>
+                    </asp:TemplateField>--%>
                     <asp:TemplateField>
                         <HeaderTemplate>
                             Project Code</HeaderTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblProjCode" runat="server" Text='<%#Eval("Proj_Code") %>'></asp:Label>
+                            <asp:Label ID="lblProjID" runat="server" Visible="false" Text='<%#Eval("PK_Org_ProjectID") %>'></asp:Label>
+                            <asp:Label ID="lblOrgEmpID" runat="server" Visible="false" Text='<%#Eval("FK_Org_EmpID") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
@@ -276,9 +305,40 @@
                             <asp:ListItem Value="0" Text="Inactive"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td colspan="3">
+                    <td >
+                    Terms:
                     </td>
-                </tr>              
+                    <td></td>
+                    <td>
+                    <div class="Outerdiv">
+                     <asp:TextBox ID="txtTerms" CssClass="txtbox" runat="server"></asp:TextBox>
+                     </div>
+                    </td>
+                </tr> 
+                 <tr>
+                    <td>
+                       E-Mail To:
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                     
+                   <asp:TextBox ID="txtEmailTo" CssClass="txtMultiline" style="width:280px;" TextMode="MultiLine" runat="server"></asp:TextBox>
+                   </td>
+
+                    <td>
+                        E-Mail CC:
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                    <asp:TextBox ID="txtEmailCC" CssClass="txtMultiline" style="width:280px;" TextMode="MultiLine"  runat="server"></asp:TextBox>
+                   </td>
+                   
+                </tr>
+                             
                 <tr>
                     <td colspan="6" align="center">
                         <asp:Button ID="btnSave" ValidationGroup="vgProjects" runat="server" Text="Save" CssClass="btnStyle"
