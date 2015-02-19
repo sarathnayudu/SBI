@@ -847,6 +847,8 @@ namespace DataAccess
             return oDsEmpEvaluation;
         }
 
+      
+
         public void DelRatingScale(SqlParameter[] sqlParams)
         {
 
@@ -932,6 +934,13 @@ namespace DataAccess
             DataSet ds = SqlHelper.ExecuteDataset(sql_con, CommandType.StoredProcedure, "sp_SearchProjects", sqlParams);
            return ds.Tables[0];
         }
+
+        public Guid GetEvaluationID(SqlParameter[] sqlParams)
+        {
+            return  (Guid)SqlHelper.ExecuteScalar(sql_con, CommandType.StoredProcedure, "sp_GetEvaluationID", sqlParams);
+            
+        }
+
     }
 }
 

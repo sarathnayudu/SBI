@@ -21,11 +21,14 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
     OrganizationBLL oBll = new OrganizationBLL();
     protected void Page_Load(object sender, EventArgs e)
     {
+       
         if (!IsPostBack)
         {
-            if (Request.QueryString["EvID"] != null)
-            {
-                oBll.EvaluationID = new Guid(Request.QueryString["EvID"].ToString());
+            //if (Request.QueryString["EvID"] != null)
+            //{
+            Guid EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+
+                oBll.EvaluationID = new Guid(EmpEvlID.ToString());//new Guid(Request.QueryString["EvID"].ToString());
                 oBll.OnlyAdmin = null;
                 oBll.GetEmpEvaluation();
                 if (oBll.oDsEmpEvaluation.Tables[0].Rows.Count > 0)
@@ -38,7 +41,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                         
                         imgLogo.ImageUrl = "~/images/ibs-logo.jpg";
 
-                        lblEmployeePerf.Text = "Employee Performance Evaluation-" + Convert.ToDateTime(oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Start_Date"]).ToString("yyyy");
+                        lblEmployeePerf.Text = "EmployeePerformanceEvaluation-" + Convert.ToDateTime(oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Start_Date"]).ToString("yyyy");
                         lblEmployee.Text = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Emp_Fname"].ToString() + " " + oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Emp_Lname"].ToString();
                         lblJobTitle.Text = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Emp_JobTitle"].ToString();
                         lblEvalPeriod.Text = Convert.ToDateTime(oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Start_Date"]).ToString("MM/dd/yyyy") + "-" + Convert.ToDateTime(oBll.oDsEmpEvaluation.Tables[0].Rows[0]["End_Date"]).ToString("MM/dd/yyyy");
@@ -69,32 +72,32 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
 
                         oBll.CompletedBy = 0;// For only employee
                         oBll.GetRatTemplQues();
-                        rptSummaryQues.DataSource = oBll.oDsRatTempQues;
-                        rptSummaryQues.DataBind();
+                        //rptSummaryQues.DataSource = oBll.oDsRatTempQues;
+                        //rptSummaryQues.DataBind();
 
-                        foreach (RepeaterItem rptItem in rptSummaryQues.Items)
-                        {
-                            Label lblQuestionID = (Label)rptItem.FindControl("lblQuestionID");
-                            Label lblQuestions = (Label)rptItem.FindControl("lblQuestions");
-                            TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
+                        //foreach (RepeaterItem rptItem in rptSummaryQues.Items)
+                        //{
+                        //    Label lblQuestionID = (Label)rptItem.FindControl("lblQuestionID");
+                        //    Label lblQuestions = (Label)rptItem.FindControl("lblQuestions");
+                        //    TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
 
-                            if (oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Summary"].ToString() != "")
-                            {
-                                string[] strSection = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Summary"].ToString().Split(';');
-                                for (int iStrLength = 0; iStrLength < strSection.Length; iStrLength++)
-                                {
-                                    string[] strSubSection = strSection[iStrLength].Split('#');
-                                    if (strSubSection.Length > 0)
-                                    {
-                                        if (lblQuestionID.Text == strSubSection[0])
-                                        {
-                                            txtAnswer.Text = strSubSection[1];
-                                        }
-                                    }
-                                }
-                            }
+                        //    if (oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Summary"].ToString() != "")
+                        //    {
+                        //        string[] strSection = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Summary"].ToString().Split(';');
+                        //        for (int iStrLength = 0; iStrLength < strSection.Length; iStrLength++)
+                        //        {
+                        //            string[] strSubSection = strSection[iStrLength].Split('#');
+                        //            if (strSubSection.Length > 0)
+                        //            {
+                        //                if (lblQuestionID.Text == strSubSection[0])
+                        //                {
+                        //                    txtAnswer.Text = strSubSection[1];
+                        //                }
+                        //            }
+                        //        }
+                        //    }
                             
-                        }
+                        //}
 
                         if (Request.QueryString["role"] != null)
                         {
@@ -111,7 +114,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                     }
                 }
 
-            }
+            //}
         }
 
     }
@@ -206,7 +209,8 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                     }
                     if (oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Eval"].ToString() != "")
                     {
-                        string[] strSection = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Eval"].ToString().Split(';');
+                       // string qe = "Question1#Ans1,ans2,ans3,ans4;Question2#Ans1,ans2,ans3,ans4;Questio3#Ans1,ans2,ans3,ans4;Question4#Ans1,ans2,ans3,ans4;";
+                        string[] strSection = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Employee_Eval"].ToString().Split(';');//qe.Split(';'); //
                         for (int iStrLength = 0; iStrLength < strSection.Length; iStrLength++)
                         {
                             string[] strSubSection = strSection[iStrLength].Split('#');
@@ -330,11 +334,11 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                     }
                 }
 
-                ddlEmployerEval.Items.Insert(0, "");
-                ddlEmployerEval.DataTextField = "Title";
-                ddlEmployerEval.DataValueField = "PK_RatingScaleTitleID";
-                ddlEmployerEval.DataSource = oBll.oDsRatingScaleTitle;
-                ddlEmployerEval.DataBind();
+                //ddlEmployerEval.Items.Insert(0, "");
+                //ddlEmployerEval.DataTextField = "Title";
+                //ddlEmployerEval.DataValueField = "PK_RatingScaleTitleID";
+                //ddlEmployerEval.DataSource = oBll.oDsRatingScaleTitle;
+                //ddlEmployerEval.DataBind();
 
                 if (Request.QueryString["role"] != null)
                 {
@@ -380,12 +384,12 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
             oBll.EvalDocPath = "";
             oBll.Processed = 0;
 
-            foreach (RepeaterItem rptItem in rptSummaryQues.Items)
-            {
-                Label lblQuestionID = (Label)rptItem.FindControl("lblQuestionID");
-                TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
-                oBll.EmployeeSumm += lblQuestionID.Text + "#" + txtAnswer.Text+";";
-            }
+            //foreach (RepeaterItem rptItem in rptSummaryQues.Items)
+            //{
+            //    Label lblQuestionID = (Label)rptItem.FindControl("lblQuestionID");
+            //    TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
+            //    oBll.EmployeeSumm += lblQuestionID.Text + "#" + txtAnswer.Text+";";
+            //}
 
             oBll.EmployeeSumm = oBll.EmployeeSumm.Remove(oBll.EmployeeSumm.Length - 1);
 
@@ -672,20 +676,20 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
         paragraph.Format.Font.Bold = true;
         paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
 
-        foreach (RepeaterItem rptItem in rptSummaryQues.Items)
-        {           
-            Label lblQuestions = (Label)rptItem.FindControl("lblQuestions");
-            TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
+        //foreach (RepeaterItem rptItem in rptSummaryQues.Items)
+        //{           
+        //    Label lblQuestions = (Label)rptItem.FindControl("lblQuestions");
+        //    TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
 
-            paragraph.Format.SpaceAfter = "0.2cm";
-            paragraph = section.AddParagraph(lblQuestions.Text);
-            paragraph.Format.Font.Bold = true;
-            paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
+        //    paragraph.Format.SpaceAfter = "0.2cm";
+        //    paragraph = section.AddParagraph(lblQuestions.Text);
+        //    paragraph.Format.Font.Bold = true;
+        //    paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
 
-            paragraph.Format.SpaceAfter = "0.1cm";
-            paragraph = section.AddParagraph(txtAnswer.Text);
+        //    paragraph.Format.SpaceAfter = "0.1cm";
+        //    paragraph = section.AddParagraph(txtAnswer.Text);
 
-        }
+        //}
         
         paragraph.Format.SpaceAfter = "0.5cm";
         paragraph = section.AddParagraph("PART B - Completed by employee and employer");

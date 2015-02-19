@@ -1493,6 +1493,7 @@ namespace BusinessLogic
             this.oDsEmpEvaluation = oDal.GetEmpEvaluation(sqlParams);
         }
 
+       
         public void DelRatingScale()
         {
             SqlParameter[] sqlParams = new SqlParameter[1];
@@ -2553,6 +2554,16 @@ namespace BusinessLogic
         }
 
         public string Cust_Name { get; set; }
+
+
+        public Guid GetEvaluationID( string empID)
+        {
+            SqlParameter[] sqlParams = new SqlParameter[1];
+            sqlParams[0] = new SqlParameter("@FK_Org_EmpID", empID);
+          return   oDal.GetEvaluationID(sqlParams);
+            
+        }
+
     }
 
 }
