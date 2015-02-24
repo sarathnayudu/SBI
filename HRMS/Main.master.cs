@@ -87,7 +87,13 @@ public partial class Main : System.Web.UI.MasterPage
                     flag = 1;
                     order = 4;
                 }
-                else if (oDtEmpDetailsCopy.Rows[iRowCount]["Page_Name"].ToString() == "My Projects" && order == 4)
+                else if (oDtEmpDetailsCopy.Rows[iRowCount]["Page_Name"].ToString() == "Performance Evaluation" && order == 4)
+                {
+                    flag = 1;
+                    order = 5;
+                }
+
+                else if (oDtEmpDetailsCopy.Rows[iRowCount]["Page_Name"].ToString() == "My Projects" && order == 5)
                 {
                     flag = 1;
                 }
