@@ -36,6 +36,8 @@ public partial class Login : System.Web.UI.Page
             {
                 lblMsg.Text = "";
                 Session["UserID"] = strMsg[1];//Storing employee code in the session
+                if (strMsg[1] != "Admin")
+                    Session["role"] = "Employee";
                 Response.Redirect("~/HRMS.aspx");
             }
             else

@@ -27,7 +27,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
             //if (Request.QueryString["EvID"] != null)
             //{
             Guid EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
-
+           
                 oBll.EvaluationID = new Guid(EmpEvlID.ToString());//new Guid(Request.QueryString["EvID"].ToString());
                 oBll.OnlyAdmin = null;
                 oBll.GetEmpEvaluation();
@@ -72,6 +72,8 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
 
                         oBll.CompletedBy = 0;// For only employee
                         oBll.GetRatTemplQues();
+                        txtAnswer.Text = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Summary1"].ToString();
+                        TextBox1.Text = oBll.oDsEmpEvaluation.Tables[0].Rows[0]["Summary2"].ToString();
                         //rptSummaryQues.DataSource = oBll.oDsRatTempQues;
                         //rptSummaryQues.DataBind();
 
@@ -99,9 +101,9 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                             
                         //}
 
-                        if (Request.QueryString["role"] != null)
+                        if (Session["role"] != null)
                         {
-                            if (Request.QueryString["role"] == "Employee")
+                            if (Session["role"] == "Employee")
                             {
                                 ddlEmpEvalGrade.Enabled = false;
                                 txtSuperVisComments.Enabled = false;
@@ -365,6 +367,15 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                 
                 Session["oDsRatingScaleTitle"] = oBll.oDsRatingScaleTitle;
             }
+
+            if (Session["role"] != null)
+            {
+                if (Session["role"] == "Employee")
+                {
+                    //NSB
+                   ((DropDownList)e.Item.FindControl("ddlEmployerEval")).Enabled = false;
+                }
+            }
         }
         catch (Exception Ex)
         {
@@ -376,21 +387,24 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
     //Code to save or update Employee Evaluation Details
     protected void btnSaveEvalDetails_Click(object sender, EventArgs e)
     {
-        if (Request.QueryString["EvID"] != null)
+        Guid EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+        if (EmpEvlID != null)
         {
-            oBll.EvaluationID = new Guid(Request.QueryString["EvID"].ToString());
+            oBll.EvaluationID = EmpEvlID;
             oBll.OrgEmpId = new Guid(hdnEmpID.Value);
             oBll.TemplateID = new Guid(hdnTemplID.Value);
             oBll.EvalDocPath = "";
             oBll.Processed = 0;
+            oBll.sumary1 = txtAnswer.Text;
+            oBll.sumary2 = TextBox1.Text;
 
             //foreach (RepeaterItem rptItem in rptSummaryQues.Items)
             //{
             //    Label lblQuestionID = (Label)rptItem.FindControl("lblQuestionID");
             //    TextBox txtAnswer = (TextBox)rptItem.FindControl("txtAnswer");
-            //    oBll.EmployeeSumm += lblQuestionID.Text + "#" + txtAnswer.Text+";";
+            //    oBll.EmployeeSumm += lblQuestionID.Text + "#" + txtAnswer.Text + ";";
             //}
-
+            if(oBll.EmployeeSumm.Length>0)
             oBll.EmployeeSumm = oBll.EmployeeSumm.Remove(oBll.EmployeeSumm.Length - 1);
 
             foreach (RepeaterItem rptItem in rptQuestions.Items)
@@ -414,27 +428,27 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
 
                     if (rdoQuestions1.Checked == true)
                     {
-                        strRatingScaleTitleID += oBll.oDsRatingScaleTitle.Tables[0].Rows[0]["PK_RatingScaleTitleID"].ToString();
+                        strRatingScaleTitleID += ddlEmployerEval.SelectedValue.ToString();
                         strRatingScaleTitleID += ",,,,";
                     }
                     else if (rdoQuestions2.Checked == true)
                     {
-                        strRatingScaleTitleID += oBll.oDsRatingScaleTitle.Tables[0].Rows[1]["PK_RatingScaleTitleID"].ToString();
+                        strRatingScaleTitleID += ddlEmployerEval.SelectedValue.ToString();
                         strRatingScaleTitleID = "," + strRatingScaleTitleID+",,,";
                     }
                     else if (rdoQuestions3.Checked == true)
                     {
-                        strRatingScaleTitleID += oBll.oDsRatingScaleTitle.Tables[0].Rows[2]["PK_RatingScaleTitleID"].ToString();
+                        strRatingScaleTitleID += ddlEmployerEval.SelectedValue.ToString();
                         strRatingScaleTitleID = ",," + strRatingScaleTitleID + ",,";
                     }
                     else if (rdoQuestions4.Checked == true)
                     {
-                        strRatingScaleTitleID += oBll.oDsRatingScaleTitle.Tables[0].Rows[3]["PK_RatingScaleTitleID"].ToString();
+                        strRatingScaleTitleID += ddlEmployerEval.SelectedValue.ToString();
                         strRatingScaleTitleID = ",,," + strRatingScaleTitleID + ",";
                     }
                     else if (rdoQuestions5.Checked == true)
                     {
-                        strRatingScaleTitleID += oBll.oDsRatingScaleTitle.Tables[0].Rows[4]["PK_RatingScaleTitleID"].ToString();
+                        strRatingScaleTitleID += ddlEmployerEval.SelectedValue.ToString();
                         strRatingScaleTitleID = ",,,," + strRatingScaleTitleID ;
                     }
                     

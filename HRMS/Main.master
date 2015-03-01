@@ -127,11 +127,11 @@
                                     <tr>
                                         <td align="left" valign="top" >
                                         <div class="Accordion">
-                                            <asp:Repeater ID="rptPages" runat="server" OnItemDataBound="rptPages_ItemDataBound">
+                                            <asp:Repeater ID="rptPages"  runat="server" OnItemDataBound="rptPages_ItemDataBound">
                                             <HeaderTemplate>
                                             
-                                            <div class="AccordionPanel" >
-                                            <div class="AccordionPanelContent" >
+                                           <%-- <div class="AccordionPanel" >
+                                            <div class="AccordionPanelContent" >--%>
                                            
                                             </HeaderTemplate>
                                                 <ItemTemplate>

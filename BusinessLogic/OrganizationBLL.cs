@@ -1387,7 +1387,7 @@ namespace BusinessLogic
 
         public string InsOrUpdtRatingTemplate()
         {
-            SqlParameter[] sqlParams = new SqlParameter[10];
+            SqlParameter[] sqlParams = new SqlParameter[12];
 
             sqlParams[0] = new SqlParameter("@PK_TemplateID", this.TemplateID);
             sqlParams[1] = new SqlParameter("@Template_Name", this.TemplateName);
@@ -1399,6 +1399,8 @@ namespace BusinessLogic
             sqlParams[7] = new SqlParameter("@Rec_CreatedDate", this.CreatedDate);
             sqlParams[8] = new SqlParameter("@Rec_ModifiedBy", this.ModifiedBy);
             sqlParams[9] = new SqlParameter("@Rec_ModifiedDate", this.ModifiedDate);
+            sqlParams[10] = new SqlParameter("@Summary_Title1", "summary title1");
+            sqlParams[11] = new SqlParameter("@Summary_Title2", "summery title2");
             
             return oDal.InsOrUpdtRatingTemplate(sqlParams);
         }
@@ -1422,7 +1424,7 @@ namespace BusinessLogic
 
         public string InsOrUpdtEmpEvaluation()
         {
-            SqlParameter[] sqlParams = new SqlParameter[18];
+            SqlParameter[] sqlParams = new SqlParameter[19];
 
             sqlParams[0] = new SqlParameter("@PK_EvaluationID", this.EvaluationID);
             sqlParams[1] = new SqlParameter("@FK_Org_EmpID", this.OrgEmpId);
@@ -1441,7 +1443,9 @@ namespace BusinessLogic
             sqlParams[14] = new SqlParameter("@Rec_CreatedDate", this.CreatedDate);
             sqlParams[15] = new SqlParameter("@Rec_ModifiedBy", this.ModifiedBy);
             sqlParams[16] = new SqlParameter("@Rec_ModifiedDate", this.ModifiedDate);
-            sqlParams[17] = new SqlParameter("@Employee_Summary", this.EmployeeSumm);
+            //sqlParams[17] = new SqlParameter("@Employee_Summary", this.EmployeeSumm);
+            sqlParams[17] = new SqlParameter("@Summary1", this.sumary1);
+            sqlParams[18] = new SqlParameter("@Summary2", this.sumary2);
 
             return oDal.InsOrUpdtEmpEvaluation(sqlParams);
         }
@@ -1477,10 +1481,10 @@ namespace BusinessLogic
 
         public void GetRatTemplQues()
         {
-            SqlParameter[] sqlParams = new SqlParameter[3];
+            SqlParameter[] sqlParams = new SqlParameter[2];
             sqlParams[0] = new SqlParameter("@PK_QuesID", this.QuesID);
             sqlParams[1] = new SqlParameter("@FK_TemplateID", this.TemplateID);
-            sqlParams[2] = new SqlParameter("@Completed_By", this.CompletedBy);
+           // sqlParams[2] = new SqlParameter("@Completed_By", this.CompletedBy);
             this.oDsRatTempQues = oDal.GetRatTemplQues(sqlParams);
         }
 
@@ -1586,6 +1590,8 @@ namespace BusinessLogic
             get { return _orgName; }
             set { _orgName = value; }
         }
+        public string sumary1=string.Empty;
+        public string sumary2=string.Empty;
         public string Address1
         {
             get { return _address1; }

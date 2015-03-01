@@ -68,6 +68,7 @@ public partial class AssignRatTemplate : System.Web.UI.Page
                 oBll.OnlyAdmin = Convert.ToByte(rdlOnlyAdmin.SelectedItem.Value);
                 oBll.EvalGrade = "";
                 oBll.ActiveStatus = 1;
+                oBll.EmployeeSumm = "Test Summery";
                lblMsg1.Text= oBll.InsOrUpdtEmpEvaluation();
                lblMsg1.Visible = true;
             }
