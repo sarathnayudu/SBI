@@ -14,8 +14,9 @@
             <asp:GridView ID="gvEmployeeDetails" runat="server" Width="98%" CssClass="gridViewStyle"
                 OnRowDataBound="gvEmployeeDetails_RowDataBound" RowStyle-CssClass="rowStyle" AllowPaging="True" OnPageIndexChanging="gvEmployeeDetails_PageIndexChanging" PageSize="10"
                 EmptyDataText="Sorry! no records found" AlternatingRowStyle-CssClass="alternateRow"
-                HeaderStyle-CssClass="gvHeader" AutoGenerateColumns="false" OnSelectedIndexChanging="gvEmployeeDetails_SelectedIndexChanging"
-                OnRowDeleting="gvEmployeeDetails_RowDeleting" >
+                HeaderStyle-CssClass="gvHeader" AutoGenerateColumns="false" 
+                 OnRowCommand="gvEmployeeDetails_RowCommand" 
+                >
                 <%--<PagerSettings Mode="NumericFirstLast" PageButtonCount="4"  FirstPageText="First" LastPageText="Last"/>--%>
                 <PagerSettings Mode="NextPreviousFirstLast" PageButtonCount="4" PreviousPageText="<< Previous" NextPageText="Next >>" FirstPageText="First"  LastPageText="Last" />
                 <PagerStyle BackColor="#084a73" Font-Bold="true" ForeColor="White" BorderColor="#041e2e" BorderWidth="2px" BorderStyle="Solid" />
@@ -94,8 +95,10 @@
                     <asp:TemplateField>
                     <HeaderStyle Width="100" />
                         <ItemTemplate>
+                             <asp:LinkButton ID="LnkPerformance" CssClass="main1" runat="server" Text="Performance" CommandName="Performance"
+                                 ></asp:LinkButton>
                             <asp:LinkButton ID="lnkEdit" CssClass="main1" runat="server" Text="Edit" CommandName="Select"></asp:LinkButton>&nbsp;&nbsp;
-                            <asp:LinkButton ID="lnkDelete" CssClass="main1" runat="server" Text="Delete" CommandName="Delete"
+                            <asp:LinkButton ID="lnkDelete" CssClass="main1" runat="server" Text="Delete" CommandName="RwDelete"
                                 OnClientClick="javascript:return confirm('Are you sure you want to delete this record?')"></asp:LinkButton>&nbsp;&nbsp;
                         </ItemTemplate>
                     </asp:TemplateField>

@@ -24,9 +24,15 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
        
         if (!IsPostBack)
         {
-            //if (Request.QueryString["EvID"] != null)
-            //{
-            Guid EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+            Guid EmpEvlID=new Guid();
+            if (Request.QueryString["PerfEmpID"] != null)
+            {
+                EmpEvlID = oBll.GetEvaluationID(Request.QueryString["PerfEmpID"]);
+            }
+            else
+            {
+                EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+            }
            
                 oBll.EvaluationID = new Guid(EmpEvlID.ToString());//new Guid(Request.QueryString["EvID"].ToString());
                 oBll.OnlyAdmin = null;

@@ -181,85 +181,84 @@ public partial class Employee : System.Web.UI.Page
 
     }
 
-    //Code to fetch existing employee's records and assign it to the fields
-    protected void gvEmployeeDetails_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
-    {
+    ////Code to fetch existing employee's records and assign it to the fields
+    //protected void gvEmployeeDetails_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    //{   
+    //    Label lblIbsid = (Label)gvEmployeeDetails.Rows[e.NewSelectedIndex].FindControl("lblIbsid");//Fetching the employee id from grid
+    //    oBll.OrgEmpId = new Guid(lblIbsid.Text);
+    //    hdnEmpID.Value = lblIbsid.Text;
 
-        Label lblIbsid = (Label)gvEmployeeDetails.Rows[e.NewSelectedIndex].FindControl("lblIbsid");//Fetching the employee id from grid
-        oBll.OrgEmpId = new Guid(lblIbsid.Text);
-        hdnEmpID.Value = lblIbsid.Text;
-
-        oBll.GetOrgEmpDetails();
-        txtIBSID.Text = oBll.OrgEmpCode;
-        txtFName.Text = oBll.FirstName;
-        txtMName.Text = oBll.MiddleName;
-        txtLName.Text = oBll.LastName;
-        ddlPrefix.SelectedValue = oBll.Prefix;
-        txtCellphone.Text = oBll.CellPhone;
-        txtHomePhone.Text = oBll.HomePhone;
-        string[] strPhone = oBll.BuisinessPhone.Split('-');
-        txtBusPhone.Text = strPhone[0];
-        if (strPhone.Length > 1)
-            txtExt.Text = strPhone[1];
-        else
-            txtExt.Text = "";
+    //    oBll.GetOrgEmpDetails();
+    //    txtIBSID.Text = oBll.OrgEmpCode;
+    //    txtFName.Text = oBll.FirstName;
+    //    txtMName.Text = oBll.MiddleName;
+    //    txtLName.Text = oBll.LastName;
+    //    ddlPrefix.SelectedValue = oBll.Prefix;
+    //    txtCellphone.Text = oBll.CellPhone;
+    //    txtHomePhone.Text = oBll.HomePhone;
+    //    string[] strPhone = oBll.BuisinessPhone.Split('-');
+    //    txtBusPhone.Text = strPhone[0];
+    //    if (strPhone.Length > 1)
+    //        txtExt.Text = strPhone[1];
+    //    else
+    //        txtExt.Text = "";
         
-        txtEMail.Text = oBll.EmailID;
-        txtAltEmail.Text = oBll.AltContactEmailAddress;
-        ddlStatus.SelectedValue = oBll.Status.ToString();
-        if (oBll.OrgRoleID != null)
-            ddlRole.SelectedValue = oBll.OrgRoleID.ToString();
-        else
-            ddlRole.SelectedIndex = 0;
+    //    txtEMail.Text = oBll.EmailID;
+    //    txtAltEmail.Text = oBll.AltContactEmailAddress;
+    //    ddlStatus.SelectedValue = oBll.Status.ToString();
+    //    if (oBll.OrgRoleID != null)
+    //        ddlRole.SelectedValue = oBll.OrgRoleID.ToString();
+    //    else
+    //        ddlRole.SelectedIndex = 0;
 
-        txtAddress1.Text = oBll.Address1;
-        txtAddress2.Text = oBll.Address2;
-        txtCity.Text = oBll.City;
-        if (oBll.State != "")
-            ddlState.SelectedValue = oBll.State;
-        else
-            ddlState.SelectedIndex = 0;
-        txtZip.Text = oBll.PostalCode;
-        txtPAddrss1.Text = oBll.AddressPers1;
-        txtpAddress2.Text = oBll.AddressPers2;
-        txtpCity.Text = oBll.CityPers;
-        if (oBll.StatePers != "")
-            ddlPState.SelectedValue = oBll.StatePers;
-        else
-            ddlPState.SelectedIndex = 0;
+    //    txtAddress1.Text = oBll.Address1;
+    //    txtAddress2.Text = oBll.Address2;
+    //    txtCity.Text = oBll.City;
+    //    if (oBll.State != "")
+    //        ddlState.SelectedValue = oBll.State;
+    //    else
+    //        ddlState.SelectedIndex = 0;
+    //    txtZip.Text = oBll.PostalCode;
+    //    txtPAddrss1.Text = oBll.AddressPers1;
+    //    txtpAddress2.Text = oBll.AddressPers2;
+    //    txtpCity.Text = oBll.CityPers;
+    //    if (oBll.StatePers != "")
+    //        ddlPState.SelectedValue = oBll.StatePers;
+    //    else
+    //        ddlPState.SelectedIndex = 0;
 
-        txtPZip.Text = oBll.PostalCodePers;
-        txtJobTitle.Text = oBll.JobTitle;
-        txtPassword.Attributes["value"] = oBll.LoginPassword;
-        txtPassword.Text = oBll.LoginPassword;
-        txtHiredDate.Text = oBll.HiredDate.ToString();
-        txtTerminatDate.Text = oBll.TerminationDate.ToString();
+    //    txtPZip.Text = oBll.PostalCodePers;
+    //    txtJobTitle.Text = oBll.JobTitle;
+    //    txtPassword.Attributes["value"] = oBll.LoginPassword;
+    //    txtPassword.Text = oBll.LoginPassword;
+    //    txtHiredDate.Text = oBll.HiredDate.ToString();
+    //    txtTerminatDate.Text = oBll.TerminationDate.ToString();
 
-        txtEmpCateg.Text=oBll.EmpCateg ;        
-        txtEmpSal.Text= oBll.EmpSal.ToString();
-         txtDocNumber.Text=oBll.DocNo;
-         txtDocExpDt.Text = oBll.DocExpDate.ToString();
-        txtLCANo.Text=oBll.LcaNo ;
-        txtLCAExpDt.Text=oBll.LcaExpDate.ToString() ;
-         txtPermCertNo.Text=oBll.PermCertNo;
-        txtI140No.Text=oBll.I140No ;
-        txtI485No.Text=oBll.I485No;
+    //    txtEmpCateg.Text=oBll.EmpCateg ;        
+    //    txtEmpSal.Text= oBll.EmpSal.ToString();
+    //     txtDocNumber.Text=oBll.DocNo;
+    //     txtDocExpDt.Text = oBll.DocExpDate.ToString();
+    //    txtLCANo.Text=oBll.LcaNo ;
+    //    txtLCAExpDt.Text=oBll.LcaExpDate.ToString() ;
+    //     txtPermCertNo.Text=oBll.PermCertNo;
+    //    txtI140No.Text=oBll.I140No ;
+    //    txtI485No.Text=oBll.I485No;
 
-        gvEmployeeDetails.Visible = false;
-        //tcEmployee.Visible = true;
-        divEmployee.Visible = true;
-        lnkBtnNewEmp.CommandArgument = "Back";
-        lnkBtnNewEmp.Text = "Back to Employee Details";
-        btnSave.Text = "Update";
-    }
+    //    gvEmployeeDetails.Visible = false;
+    //    //tcEmployee.Visible = true;
+    //    divEmployee.Visible = true;
+    //    lnkBtnNewEmp.CommandArgument = "Back";
+    //    lnkBtnNewEmp.Text = "Back to Employee Details";
+    //    btnSave.Text = "Update";
+    //}
 
     //Code to delete any employee record
     protected void gvEmployeeDetails_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-        Label lblIbsid = (Label)gvEmployeeDetails.Rows[e.RowIndex].FindControl("lblIbsid");
-        oBll.OrgEmpId = new Guid(lblIbsid.Text);
-        oBll.DelOrgEmpDetails();
-        BindEmpolyeeDetails();
+        //Label lblIbsid = (Label)gvEmployeeDetails.Rows[e.RowIndex].FindControl("lblIbsid");
+        //oBll.OrgEmpId = new Guid(lblIbsid.Text);
+        //oBll.DelOrgEmpDetails();
+        //BindEmpolyeeDetails();
     }
 
     protected void btnReset_Click(object sender, EventArgs e)
@@ -480,4 +479,97 @@ public partial class Employee : System.Web.UI.Page
             Response.Redirect("~/NoAccess.aspx");
     }
 
+    protected void LnkPerformance_Command(object sender, CommandEventArgs e)
+    {
+        GridView gv = (GridView)sender;
+    }
+    protected void gvEmployeeDetails_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        
+        if (e.CommandName == "Select")
+        {
+            GridViewRow row = (GridViewRow)((Control)e.CommandSource).Parent.Parent;
+            Label lblIbsid = (Label)gvEmployeeDetails.Rows[row.RowIndex].FindControl("lblIbsid");//Fetching the employee id from grid
+            oBll.OrgEmpId = new Guid(lblIbsid.Text);
+            hdnEmpID.Value = lblIbsid.Text;
+
+            oBll.GetOrgEmpDetails();
+            txtIBSID.Text = oBll.OrgEmpCode;
+            txtFName.Text = oBll.FirstName;
+            txtMName.Text = oBll.MiddleName;
+            txtLName.Text = oBll.LastName;
+            ddlPrefix.SelectedValue = oBll.Prefix;
+            txtCellphone.Text = oBll.CellPhone;
+            txtHomePhone.Text = oBll.HomePhone;
+            string[] strPhone = oBll.BuisinessPhone.Split('-');
+            txtBusPhone.Text = strPhone[0];
+            if (strPhone.Length > 1)
+                txtExt.Text = strPhone[1];
+            else
+                txtExt.Text = "";
+
+            txtEMail.Text = oBll.EmailID;
+            txtAltEmail.Text = oBll.AltContactEmailAddress;
+            ddlStatus.SelectedValue = oBll.Status.ToString();
+            if (oBll.OrgRoleID != null)
+                ddlRole.SelectedValue = oBll.OrgRoleID.ToString();
+            else
+                ddlRole.SelectedIndex = 0;
+
+            txtAddress1.Text = oBll.Address1;
+            txtAddress2.Text = oBll.Address2;
+            txtCity.Text = oBll.City;
+            if (oBll.State != "")
+                ddlState.SelectedValue = oBll.State;
+            else
+                ddlState.SelectedIndex = 0;
+            txtZip.Text = oBll.PostalCode;
+            txtPAddrss1.Text = oBll.AddressPers1;
+            txtpAddress2.Text = oBll.AddressPers2;
+            txtpCity.Text = oBll.CityPers;
+            if (oBll.StatePers != "")
+                ddlPState.SelectedValue = oBll.StatePers;
+            else
+                ddlPState.SelectedIndex = 0;
+
+            txtPZip.Text = oBll.PostalCodePers;
+            txtJobTitle.Text = oBll.JobTitle;
+            txtPassword.Attributes["value"] = oBll.LoginPassword;
+            txtPassword.Text = oBll.LoginPassword;
+            txtHiredDate.Text = oBll.HiredDate.ToString();
+            txtTerminatDate.Text = oBll.TerminationDate.ToString();
+
+            txtEmpCateg.Text = oBll.EmpCateg;
+            txtEmpSal.Text = oBll.EmpSal.ToString();
+            txtDocNumber.Text = oBll.DocNo;
+            txtDocExpDt.Text = oBll.DocExpDate.ToString();
+            txtLCANo.Text = oBll.LcaNo;
+            txtLCAExpDt.Text = oBll.LcaExpDate.ToString();
+            txtPermCertNo.Text = oBll.PermCertNo;
+            txtI140No.Text = oBll.I140No;
+            txtI485No.Text = oBll.I485No;
+
+            gvEmployeeDetails.Visible = false;
+            //tcEmployee.Visible = true;
+            divEmployee.Visible = true;
+            lnkBtnNewEmp.CommandArgument = "Back";
+            lnkBtnNewEmp.Text = "Back to Employee Details";
+            btnSave.Text = "Update";
+        }
+        else if (e.CommandName == "Performance")
+        {
+            GridViewRow row = (GridViewRow)((Control)e.CommandSource).Parent.Parent;
+            Label lblIbsid = (Label)gvEmployeeDetails.Rows[row.RowIndex].FindControl("lblIbsid");
+
+            Response.Redirect("~/ViewEmployeeEvaluation.aspx?PerfEmpID=" + lblIbsid.Text);
+        }
+        else if (e.CommandName == "RwDelete")
+        {
+            GridViewRow row = (GridViewRow)((Control)e.CommandSource).Parent.Parent;
+            Label lblIbsid = (Label)gvEmployeeDetails.Rows[row.RowIndex].FindControl("lblIbsid");
+            oBll.OrgEmpId = new Guid(lblIbsid.Text);
+            oBll.DelOrgEmpDetails();
+            BindEmpolyeeDetails();
+        }
+    }
 }
