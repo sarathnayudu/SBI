@@ -560,8 +560,8 @@ public partial class Employee : System.Web.UI.Page
         {
             GridViewRow row = (GridViewRow)((Control)e.CommandSource).Parent.Parent;
             Label lblIbsid = (Label)gvEmployeeDetails.Rows[row.RowIndex].FindControl("lblIbsid");
-
-            Response.Redirect("~/ViewEmployeeEvaluation.aspx?PerfEmpID=" + lblIbsid.Text);
+            Session["PerfEmpID"] = lblIbsid.Text;
+            Response.Redirect("~/ViewEmployeeEvaluation.aspx");
         }
         else if (e.CommandName == "RwDelete")
         {

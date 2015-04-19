@@ -25,9 +25,9 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
         if (!IsPostBack)
         {
             Guid EmpEvlID=new Guid();
-            if (Request.QueryString["PerfEmpID"] != null)
+            if (Session["PerfEmpID"] != null)
             {
-                EmpEvlID = oBll.GetEvaluationID(Request.QueryString["PerfEmpID"]);
+                EmpEvlID = oBll.GetEvaluationID(Session["PerfEmpID"].ToString());
             }
             else
             {
@@ -393,7 +393,15 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
     //Code to save or update Employee Evaluation Details
     protected void btnSaveEvalDetails_Click(object sender, EventArgs e)
     {
-        Guid EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+        Guid EmpEvlID = new Guid();
+        if (Session["PerfEmpID"] != null)
+        {
+            EmpEvlID = oBll.GetEvaluationID(Session["PerfEmpID"].ToString());
+        }
+        else
+        {
+            EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
+        }
         if (EmpEvlID != null)
         {
             oBll.EvaluationID = EmpEvlID;
@@ -502,9 +510,9 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                 oBll.EmployerEval = oBll.EmployerEval.Remove(oBll.EmployerEval.Length-1);
             if (oBll.EmployeeEval.Contains(";"))
                 oBll.EmployeeEval = oBll.EmployeeEval.Remove(oBll.EmployeeEval.Length - 1);
-                       
-           
-            oBll.OnlyAdmin = Convert.ToByte(Convert.ToBoolean((hdnOnlyAdmin.Value)));
+
+
+            oBll.OnlyAdmin = string.IsNullOrEmpty(hdnOnlyAdmin.Value) ? (byte)0 : (byte)1;
             oBll.EvalGrade = ddlEmpEvalGrade.SelectedItem.Text;
             oBll.SupervComm = txtSuperVisComments.Text;
             if (hdnFileName.Value != "")
