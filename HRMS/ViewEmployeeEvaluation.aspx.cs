@@ -656,7 +656,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
 
         }
 
-
+       
         MigraDoc.DocumentObjectModel.Shapes.Image image = section.AddImage(Server.MapPath("~/images/ibs-logo.jpg"));
 
         image.LockAspectRatio = true;
@@ -704,6 +704,13 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
         paragraph.Format.Font.Bold = true;
         paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
 
+        paragraph.Format.SpaceAfter = "0.5cm";
+        paragraph = section.AddParagraph(txtAnswer.Text);
+        paragraph.Format.Font.Bold = true;
+        paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
+
+
+
         //foreach (RepeaterItem rptItem in rptSummaryQues.Items)
         //{           
         //    Label lblQuestions = (Label)rptItem.FindControl("lblQuestions");
@@ -721,6 +728,11 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
         
         paragraph.Format.SpaceAfter = "0.5cm";
         paragraph = section.AddParagraph("PART B - Completed by employee and employer");
+        paragraph.Format.Font.Bold = true;
+        paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
+
+        paragraph.Format.SpaceAfter = "0.5cm";
+        paragraph = section.AddParagraph(TextBox1.Text);
         paragraph.Format.Font.Bold = true;
         paragraph.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.IndianRed;
 
