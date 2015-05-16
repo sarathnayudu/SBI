@@ -89,3 +89,10 @@ D:\myfolder\Repositary\IBS\IBSHRMS\Production\SBI\BusinessLogic\bin\Debug\DataAc
 D:\myfolder\Repositary\IBS\IBSHRMS\Production\SBI\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 D:\myfolder\Repositary\IBS\IBSHRMS\Production\SBI\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\myfolder\Repositary\IBS\IBSHRMS\Production\SBI\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\bin\Debug\DataAccess.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\myfolder\Repositary\IBS\IBSHRMS\SBI\BusinessLogic\obj\Debug\BusinessLogic.pdb

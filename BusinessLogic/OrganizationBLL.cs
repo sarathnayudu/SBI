@@ -1407,7 +1407,7 @@ namespace BusinessLogic
 
         public string InsOrUpdtRatTemplQues()
         {
-            SqlParameter[] sqlParams = new SqlParameter[9];
+            SqlParameter[] sqlParams = new SqlParameter[8];
 
             sqlParams[0] = new SqlParameter("@PK_QuesID", this.QuesID);
             sqlParams[1] = new SqlParameter("@FK_TemplateID", this.TemplateID);
@@ -1417,7 +1417,7 @@ namespace BusinessLogic
             sqlParams[5] = new SqlParameter("@Rec_CreatedDate", this.CreatedDate);
             sqlParams[6] = new SqlParameter("@Rec_ModifiedBy", this.ModifiedBy);
             sqlParams[7] = new SqlParameter("@Rec_ModifiedDate", this.ModifiedDate);
-            sqlParams[8] = new SqlParameter("@Completed_By", this.CompletedBy);
+           // sqlParams[8] = new SqlParameter("@Completed_By", this.CompletedBy);
 
             return oDal.InsOrUpdtRatTemplQues(sqlParams);
         }
