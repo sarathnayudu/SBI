@@ -34,7 +34,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
                 EmpEvlID = oBll.GetEvaluationID(Session["EmpID"].ToString());
             }
            
-                oBll.EvaluationID = new Guid(EmpEvlID.ToString());//new Guid(Request.QueryString["EvID"].ToString());
+                oBll.EvaluationID = new Guid(EmpEvlID.ToString()).ToString();//new Guid(Request.QueryString["EvID"].ToString());
                 oBll.OnlyAdmin = null;
                 oBll.GetEmpEvaluation();
                 if (oBll.oDsEmpEvaluation.Tables[0].Rows.Count > 0)
@@ -404,7 +404,7 @@ public partial class ViewEmployeeEvaluation : System.Web.UI.Page
         }
         if (EmpEvlID != null)
         {
-            oBll.EvaluationID = EmpEvlID;
+            oBll.EvaluationID = EmpEvlID.ToString();
             oBll.OrgEmpId = new Guid(hdnEmpID.Value);
             oBll.TemplateID = new Guid(hdnTemplID.Value);
             oBll.EvalDocPath = "";

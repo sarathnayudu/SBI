@@ -172,7 +172,7 @@ namespace BusinessLogic
         private string _questions = "";
         private int? _completedBy=null;
 
-        private Guid? _evaluationID = null;
+        private string _evaluationID = null;
         private string _evalDocPath = "";
         private int _processed ;
         private string _employerEval = "";
@@ -688,6 +688,15 @@ namespace BusinessLogic
             sqlParams[5] = new SqlParameter("@Emp_EmailID", this.EmailID);
             sqlParams[6] = new SqlParameter("@ActiveFlag", this.ActiveStatus);
             this.oDsOrgEmpDetails = oDal.SearchOrgEmpDetails(sqlParams);
+        }
+
+        public void SearchOrgEmpDetailsForAssigntemplates()
+        {
+            SqlParameter[] sqlParams = new SqlParameter[1];
+            sqlParams[0] = new SqlParameter("@SearchText", this.FirstName);
+           
+                      
+            this.oDsOrgEmpDetails = oDal.SearchOrgEmpDetailsForAssignTemplates(sqlParams);
         }
 
         public void DelOrgEmpDetails()
@@ -1568,12 +1577,13 @@ namespace BusinessLogic
             }
         }
 
-        public void DelEmpEvaluation()
+        public void DelEmpEvaluation(string empID)
         {
-            SqlParameter[] sqlParams = new SqlParameter[1];
+            SqlParameter[] sqlParams = new SqlParameter[2];
             try
             {
                 sqlParams[0] = new SqlParameter("@PK_EvaluationID", this.EvaluationID);
+                sqlParams[1] = new SqlParameter("@FK_Org_EmpID", empID);
                 oDal.DelEmpEvaluation(sqlParams);
             }
             catch (Exception Ex)
@@ -2460,7 +2470,7 @@ namespace BusinessLogic
             set { _oDsRatTempQues = value; }
         }
 
-        public Guid? EvaluationID
+        public string EvaluationID
         {
             get { return _evaluationID; }
             set { _evaluationID = value; }

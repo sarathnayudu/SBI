@@ -81,7 +81,9 @@
                             </asp:TemplateField>
                             <asp:TemplateField>
                                 <HeaderTemplate>
-                                   Employee Name</HeaderTemplate>
+                                   Employee Name <br />
+                                     <asp:TextBox ID="txtEmpName" AutoPostBack="true" CssClass="text"  runat="server" ontextchanged="txtEmpName_TextChanged"></asp:TextBox>                            
+                                </HeaderTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="lblEmployeeFName" runat="server" Text='<%#Eval("Emp_Fname") %>'></asp:Label>&nbsp;
                                     <asp:Label ID="lblEmployeeLName" runat="server" Text='<%#Eval("Emp_Lname") %>'></asp:Label>
@@ -90,7 +92,8 @@
                             
                              <asp:TemplateField>
                         <HeaderTemplate>
-                            Cell Phone
+                            Cell Phone  <br />
+                                     <asp:TextBox ID="txtCellPhone" AutoPostBack="true" CssClass="text"  runat="server" ontextchanged="txtEmpName_TextChanged"></asp:TextBox>                            
                             </HeaderTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblCellPhone" runat="server" Text='<%#Eval("Emp_CellPhone") %>'></asp:Label>
@@ -99,7 +102,8 @@
                    
                     <asp:TemplateField>
                         <HeaderTemplate>
-                            Business Phone
+                            Business Phone  <br />
+                                     <asp:TextBox ID="txtBusinesPhone" AutoPostBack="true" CssClass="text"  runat="server" ontextchanged="txtEmpName_TextChanged"></asp:TextBox>                            
                             </HeaderTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblBuisinsPhone" runat="server" Text='<%#Eval("Emp_BusinessPhone") %>'></asp:Label>
@@ -107,7 +111,8 @@
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <HeaderTemplate>
-                            Email Id
+                            Email Id  <br />
+                                     <asp:TextBox ID="txtEmail" AutoPostBack="true" CssClass="text"  runat="server" ontextchanged="txtEmpName_TextChanged"></asp:TextBox>                            
                             </HeaderTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblEmailId" runat="server" Text='<%#Eval("Emp_EmailId") %>'></asp:Label>
@@ -146,6 +151,7 @@
                                 <ItemTemplate>
                                     <%#Container.DataItemIndex + 1%>
                                    <asp:Label ID="lblEvaluationID" Visible="false" runat="server" Text='<%#Eval("PK_EvaluationID") %>'></asp:Label>
+                                     <asp:Label ID="lblEmpID" Visible="false" runat="server" Text='<%#Eval("FK_Org_EmpID") %>'></asp:Label>
                                     </ItemTemplate>
                             </asp:TemplateField>
                          

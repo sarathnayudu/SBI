@@ -27,7 +27,7 @@
                         <HeaderTemplate > 
                             First Name   <br />                         
                             <asp:TextBox ID="txtName" AutoPostBack="true" CssClass="text"  runat="server" ontextchanged="txtName_TextChanged"></asp:TextBox>                            
-                            </HeaderTemplate>
+                        </HeaderTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblIbsid" Visible="false" runat="server" Text='<%#Eval("PK_Org_EmpID") %>'></asp:Label>
                             <asp:Label ID="lblFirstName" runat="server" Text='<%#Eval("Emp_Fname") %>'></asp:Label>

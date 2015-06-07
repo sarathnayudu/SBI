@@ -40,8 +40,10 @@ public partial class AssignRatTemplate : System.Web.UI.Page
         try
         {
             Label lblEvaluationID = (Label)gvAssignedTemplate.Rows[e.RowIndex].FindControl("lblEvaluationID");
-            oBll.EvaluationID = new Guid(lblEvaluationID.Text);
-            oBll.DelEmpEvaluation();
+            Label lblEempID = (Label)gvAssignedTemplate.Rows[e.RowIndex].FindControl("lblEmpID");
+            
+            oBll.EvaluationID = lblEvaluationID.Text;
+            oBll.DelEmpEvaluation(lblEempID.Text);
             BindAssignedTempl();
         }
         catch (Exception ex)
@@ -125,4 +127,21 @@ public partial class AssignRatTemplate : System.Web.UI.Page
         gvAssignedTemplate.DataSource = oBll.oDsEmpEvaluation;
         gvAssignedTemplate.DataBind();
     }
+    protected void txtEmpName_TextChanged(object sender, EventArgs e)
+    {
+        TextBox txtSearch = (TextBox)sender;
+       
+            AssignTextValues(txtSearch.Text);
+    }
+    //Method to show the employee records as per their entries in search textfields
+    private void AssignTextValues(string strSearchtext)
+    {
+        oBll.FirstName = strSearchtext;
+       
+        oBll.SearchOrgEmpDetailsForAssigntemplates();
+            //ForAssignTemplates();
+        gvEmployeeDetails.DataSource = oBll.oDsOrgEmpDetails;
+        gvEmployeeDetails.DataBind();
+    }
+
 }

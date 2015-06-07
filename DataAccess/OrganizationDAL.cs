@@ -941,6 +941,20 @@ namespace DataAccess
             
         }
 
+
+        public DataSet SearchOrgEmpDetailsForAssignTemplates(SqlParameter[] sqlParams)
+        {
+            DataSet oDsOrgEmpDetails = null;
+            try
+            {
+                oDsOrgEmpDetails = SqlHelper.ExecuteDataset(sql_con, CommandType.StoredProcedure, "sp_SearchOrgEmpDetailsForAssignTemplate", sqlParams);
+                return oDsOrgEmpDetails;
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+        }
     }
 }
 
